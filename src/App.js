@@ -1,13 +1,19 @@
+// App.js
 import React from "react";
+import "./App.css";
 
 const App = () => {
-  return <h1 title="This works!">A React App!</h1>; // React.createElement('h1',{title:"This works!"},"A React App!");
+  return (
+    <div className="course-goals">
+      <h2>Course Goals</h2>
+      <ul className="goal-list">
+        <li>Learn Javascript</li>
+        <li>Learn React</li>
+        <li>Learn Redux</li>
+        <li>Help others in course Q&A</li>
+      </ul>
+    </div>
+  );
 };
-
-// class App extends React.Component {
-//   render() {
-//     return <h1 title="This works!">A React App!</h1>;
-//   }
-// }
 
 export default App;
