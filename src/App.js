@@ -1,17 +1,14 @@
-// App.js
+// ./App.js
 import React from "react";
-import "./App.css";
+import GoalList from "./components/GoalList"; // component start with an uppercase character
+
+import "./App.css"; // styles are always applied globally
 
 const App = () => {
   return (
     <div className="course-goals">
       <h2>Course Goals</h2>
-      <ul className="goal-list">
-        <li>Learn Javascript</li>
-        <li>Learn React</li>
-        <li>Learn Redux</li>
-        <li>Help others in course Q&A</li>
-      </ul>
+      <GoalList />
     </div>
   );
 };
