@@ -1,14 +1,16 @@
 // ./components/GoalList.js
 import React from "react";
-import "./GoalList.css"; //css are applied globally to your entire page
 
-const GoalList = () => {
+//css are applied globally to your entire page
+import "./GoalList.css";
+
+const GoalList = (props) => {
   return (
     <ul className="goal-list">
-      <li>Learn Javascript</li>
-      <li>Learn React</li>
-      <li>Learn Redux</li>
-      <li>Help others in course Q&A</li>
+      <li>{props.goals[0].text}</li>
+      <li>{props.goals[1].text}</li>
+      <li>{props.goals[2].text}</li>
+      <li>{props.goals[3].text}</li>
     </ul>
   );
 };
