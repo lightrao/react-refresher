@@ -2,14 +2,14 @@
 import React from "react";
 import "./NewGoal.css";
 
-const NewGoal = () => {
+const NewGoal = (props) => {
   const addGoalHandler = (event) => {
     event.preventDefault();
     const newGoal = {
       id: Math.random().toString(),
       text: "A new goal!",
     };
-    console.log("onSubmit trigger addGoal Handler:", newGoal);
+    props.onAddGoal(newGoal);
   };
 
   return (

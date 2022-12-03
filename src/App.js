@@ -15,10 +15,16 @@ const App = () => {
     { id: "cg3", text: "Learn Redux" },
     { id: "cg4", text: "Help others in course Q&A" },
   ];
+
+  const addNewGoalHandler = (newGoal) => {
+    courseGoals.push(newGoal);
+    console.log(courseGoals);
+  };
+
   return (
     <div className="course-goals">
       <h2>Course Goals</h2>
-      <NewGoal />
+      <NewGoal onAddGoal={addNewGoalHandler} />
       <GoalList goals={courseGoals} />
     </div>
   );
