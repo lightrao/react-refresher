@@ -3,6 +3,7 @@ import React from "react";
 
 // component start with an uppercase character
 import GoalList from "./components/GoalList";
+import NewGoal from "./components/NewGoal";
 
 // styles are always applied globally
 import "./App.css";
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <div className="course-goals">
       <h2>Course Goals</h2>
+      <NewGoal />
       <GoalList goals={courseGoals} />
     </div>
   );
