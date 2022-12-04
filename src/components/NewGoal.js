@@ -1,9 +1,9 @@
 // ./components/NewGoal.js
-import React from "react";
+import React, { useState } from "react";
 import "./NewGoal.css";
 
 const NewGoal = (props) => {
-  let enteredText = ""; // variable will not lead to UI rerender
+  const [enteredText, setEnteredText] = useState("");
 
   const addGoalHandler = (event) => {
     event.preventDefault();
@@ -13,11 +13,11 @@ const NewGoal = (props) => {
     };
 
     props.onAddGoal(newGoal);
-    enteredText = ""; // this is not reflected on our input
+    setEnteredText("");
   };
 
   const textChangeHandler = (event) => {
-    enteredText = event.target.value;
+    setEnteredText(event.target.value);
   };
 
   return (
